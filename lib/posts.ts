@@ -27,12 +27,9 @@ export function getSortedPostsData() {
     }
   })
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
+  //TODO: 型定義をする
+  return allPostsData.sort((a:any, b:any) => {
+    return a.date < b.date ? 1 : -1;
   })
 }
 
